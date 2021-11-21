@@ -1,17 +1,18 @@
 import React, { useState } from "react";
-import { Modal } from "react-native";
-import {
-  ModalButton,
-  ModalContainer,
-  ModalView,
-  StyledInput,
-  ModalAction,
-  ModalActionGroup,
-  ModalIcon,
-  HeaderTitle,
-  Colors,
-} from "./styles.js";
-import { AntDesign } from "@expo/vector-icons";
+import { Text, View } from "react-native";
+// import { Modal, Text, View } from "react-native";
+// import {
+//   ModalButton,
+//   ModalContainer,
+//   ModalView,
+//   StyledInput,
+//   ModalAction,
+//   ModalActionGroup,
+//   ModalIcon,
+//   HeaderTitle,
+//   Colors,
+// } from "./styles.js";
+// import { AntDesign } from "@expo/vector-icons";
 
 const InputModal = ({
   modalVisible,
@@ -24,45 +25,47 @@ const InputModal = ({
   handleEditTodo,
   todos,
 }) => {
-  const handleSubmit = () => {
-    if (!todoToBeEdited) {
-      handleAddTodo({
-        title: todoInputValue,
-        // date: new Date().toUTCString(),
-        key: `${
-          (todos[todos.length - 1] &&
-            parseInt(todos[todos.length - 1].key) + 1) ||
-          1
-        }`,
-      });
-    } else {
-      handleEditTodo({
-        title: todoInputValue,
-        // date: todoToBeEdited.date,
-        key: todoToBeEdited.key,
-      });
-    }
+  // const handleSubmit = () => {
+  //   if (!todoToBeEdited) {
+  //     handleAddTodo({
+  //       title: todoInputValue,
+  //       // date: new Date().toUTCString(),
+  //       key: `${
+  //         (todos[todos.length - 1] &&
+  //           parseInt(todos[todos.length - 1].key) + 1) ||
+  //         1
+  //       }`,
+  //     });
+  //   } else {
+  //     handleEditTodo({
+  //       title: todoInputValue,
+  //       // date: todoToBeEdited.date,
+  //       key: todoToBeEdited.key,
+  //     });
+  //   }
 
-    setTodoInputValue("");
-  };
+  //   setTodoInputValue("");
+  // };
 
-  const handleCloseModal = () => {
-    setTodoInputValue("");
-    setModalVisible(false);
-    setTodoToBeEdited(null);
-  };
+  // const handleCloseModal = () => {
+  //   setTodoInputValue("");
+  //   setModalVisible(false);
+  //   setTodoToBeEdited(null);
+  // };
 
   return (
-    <>
-      
+    
+    
+    <Modal
+    animationType="slide"
+    transparent={true}
+    visible={modalVisible}
+    onRequestClose={handleCloseModal}
+    >
 
-      <Modal
-        animationType="slide"
-        transparent={true}
-        visible={modalVisible}
-        onRequestClose={handleCloseModal}
-      >
-        <ModalContainer>
+    <View>
+        <Text style={{color: "#fff"}}>Modal</Text>
+        {/* <ModalContainer>
           <ModalView>
            
 
@@ -85,9 +88,9 @@ const InputModal = ({
               </ModalAction>
             </ModalActionGroup>
           </ModalView>
-        </ModalContainer>
+        </ModalContainer> */}
+    </View>
       </Modal>
-    </>
   );
 };
 

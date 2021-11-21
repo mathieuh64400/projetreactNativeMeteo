@@ -108,11 +108,13 @@ const styles = StyleSheet.create({
         flex: 1,
         width:'100%' ,
         backgroundColor:"black"
-    },cadre:{marginTop:"-50%"},
+    },
+    cadre:{marginTop:"-50%"},
     navtext:{
       fontSize: 15,
       color:'white'
-    },info:{fontWeight:"bold",fontSize:15,marginBottom:"15%",marginLeft:"-2%"},
+    },
+    info:{fontWeight:"bold",fontSize:15,marginBottom:"15%",marginLeft:"-2%"},
     tempText: {
         fontSize: 48,
         color: '#fff'
@@ -124,7 +126,7 @@ const styles = StyleSheet.create({
         justifyContent: 'space-between',
        marginTop:'2%',
         backgroundColor:'transparent',
-        opacity:'66%',
+        opacity:0.66,
         width:'100%',
         
     },
@@ -134,8 +136,8 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         paddingLeft: 25,
         marginTop:"-50%",
-        backgroundColor:"bleu",
-        border:"solid 1px red",
+        backgroundColor:"#00f",
+        // border:"solid 1px red",
         width:"100%"
     },
     title: {
@@ -162,8 +164,8 @@ const styles = StyleSheet.create({
         flex:1,
         borderRadius: 4,
         borderWidth: 1,
-        borderColor: 'blue',
-        backgroundColor: 'blue',
+        borderColor: '#00f',
+        backgroundColor: '#00f',
       }, text: {
         fontSize: 18,
         padding: 12,

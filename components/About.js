@@ -6,7 +6,7 @@ import Weather from '../utils/Weather';
 const API_KEY = "721e6e1f9205d22adf412c4aa34b0740";
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    flex: 2,
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
@@ -16,7 +16,7 @@ const styles = StyleSheet.create({
       fontSize: 28
   }, button:{
     backgroundColor:'#6D28D9',
-    colors:'black',
+    color:'black',
     width:"100%"
 }
 })
@@ -47,7 +47,7 @@ export default function About({navigation}) {
   }
 
   useEffect(() => {
-      fetchWeatherData('PAU');
+      fetchWeatherData('Pau');
   }, [])
   
 

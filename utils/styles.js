@@ -72,7 +72,7 @@ export const ListView = styled.TouchableHighlight`
   background-color: ${Colors.secondary};
   min-height: 40px;
   width: 100%;
-  marin-top:5%;
+  margin-top:5%;
   padding: 15px;
   justify-content: space-around;
   margin-bottom: 5px;
@@ -154,7 +154,7 @@ export const StyledInput = styled.TextInput`
   background-color: ${Colors.tertiary};
   padding: 5px;
   font-size: 16px;
-  // border-radius: 10px;
+
   color: ${Colors.secondary};
   letter-spacing: 1px;
   

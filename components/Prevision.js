@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import * as Location from 'expo-location'
 import { Image, StyleSheet, Text, TouchableOpacity, View,ImageBackground,Button } from 'react-native';
 import Datetime from '../utils/Datetime';
 import WeatherScroll from '../utils/WeatherScroll';
@@ -12,6 +13,7 @@ export default function Prevision({navigation}) {
   const [data, setData] = useState({});
 
   useEffect(() => {
+    Location.installWebGeolocationPolyfill()
     navigator.geolocation.getCurrentPosition((sucess)=>{
       let {latitude,longitude} =sucess.coords;
       fetchDataFromApi(latitude,longitude);
@@ -61,14 +63,16 @@ const styles = StyleSheet.create({
   },
   TextInput:{
     fontSize:24
-  }, container: {
+  },
+   container: {
     flex: 1,
-  },headerContainer: {
+  },
+  headerContainer: {
     flex: 1,
     flexDirection: "row",
     alignItems: 'center',
     justifyContent: 'space-between',
-   marginTop:'2%',
+    marginTop:'2%',
     backgroundColor:'transparent',
     width:'100%',
     height:1,

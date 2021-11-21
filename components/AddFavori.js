@@ -31,20 +31,27 @@ const AddFavori = () => {
       .catch((error) => console.log(error));
   };
 
-  if (!ready) {
-    return (
-      <AppLoading
-        startAsync={loadTodos}
-        onFinish={() => setReady(true)}
-        onError={console.warn}
-      />
-    );
-  }
+  
+
+  // useEffect(()=>{
+  //   setTimeout(() => {
+  //     setReady(true)
+  //   }, 1000);
+  // }, [])
 
     return (
     <>
     <Container>
-     <Intermediaire todos={todos} setTodos={setTodos}/>
+      {!ready && <AppLoading
+      onFinish={() => {
+        setReady(true)
+      
+      }}
+      onError={(err) => {
+        console.log(err);
+      }}
+      ><Text color>Not Ready</Text></AppLoading>}
+     {ready && <Intermediaire todos={todos} setTodos={setTodos}/>}
     </Container>
     </>
     );

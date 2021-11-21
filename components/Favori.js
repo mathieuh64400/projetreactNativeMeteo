@@ -127,7 +127,8 @@ const image={ uri: "http://mourirmoinscon.com/images/2019/07/03/ciel-bleu-bd.jpg
     buttontext:{
       fontSize: 15,
       color:'white',backgroundColor:'black',width:'100%',marginLeft:'-5%',height:'100%'
-    },info:{fontWeight:"bold",fontSize:15,marginBottom:"15%",marginLeft:"-2%"},
+    },
+    info:{fontWeight:"bold",fontSize:15,marginBottom:"15%",marginLeft:"-2%"},
     tempText: {
         fontSize: 48,
         color: '#fff'
@@ -137,9 +138,9 @@ const image={ uri: "http://mourirmoinscon.com/images/2019/07/03/ciel-bleu-bd.jpg
         flexDirection: "row",
         alignItems: 'center',
         justifyContent: 'space-between',
-       marginTop:'2%',
+        marginTop:'2%',
         backgroundColor:'black',
-        opacity:'66%',
+        opacity:0.66,
         width:'100%',
         height:2,
 
@@ -149,7 +150,8 @@ const image={ uri: "http://mourirmoinscon.com/images/2019/07/03/ciel-bleu-bd.jpg
         alignItems: 'flex-start',
         justifyContent: 'flex-end',
         paddingLeft: 25,
-        marginBottom: 40,backgroundColor:"bleu",
+        marginBottom: 40,
+        backgroundColor:"#00f",
         width:"200%"
     },
     title: {
@@ -176,8 +178,8 @@ const image={ uri: "http://mourirmoinscon.com/images/2019/07/03/ciel-bleu-bd.jpg
         flex:1,
         borderRadius: 4,
         borderWidth: 1,
-        borderColor: 'blue',
-        backgroundColor: 'blue',
+        borderColor: '#00f',
+        backgroundColor: '#00f',
       }, text: {
         fontSize: 18,
         padding: 12,
